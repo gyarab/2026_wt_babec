@@ -1,0 +1,1 @@
+Ahoj, vítej, dobrý den.

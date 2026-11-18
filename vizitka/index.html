@@ -52,6 +52,14 @@ background-color: #ff1f17
     padding: 15px;
     border-radius: 25px;
     margin:auto;
+
+}
+
+.ramecekdva{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
 }
 
 </style>
@@ -63,7 +71,7 @@ background-color: #ff1f17
 
 <script>
         function tlacitko(){
-        alert("HOLA HOLA, KDO VOLA")
+        alert("Tlačítko funguje")
     }
 </script>
 
@@ -95,16 +103,29 @@ background-color: #ff1f17
             <div class ="container">
             <h2>
                 Kratky popis:
-                beham, sportuju, chodim ven, programuju
             </h2>
-            <h3>Oblibene veci: spanek, jidlo, hudba</h3>
+            </div>
 
+            <div class ="ramecekdva">
+            <h3>
+                beham, sportuju, chodim ven, programuju
+            </h3>
+            </div>
+
+            <div class ="container">
+                <h2>Oblibene veci:</h2>
+            </div>
+
+            <div class ="ramecekdva">
+            <h3>spanek, jidlo, hudba</h3>
+            </div>
+            
             <span onclick = "tlacitko();">
                 <button type="button">Click Me!</button>
             </span>
             
 
-</div>
+
         </div>        
     
        

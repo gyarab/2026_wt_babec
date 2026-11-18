@@ -1,59 +1,152 @@
 <!DOCTYPE html>
 <html lang="cs" data-bs-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <!-- BEZ TOHOTO ŘÁDKU RESPONZIVITA NA MOBILU NEFUNGUJE -->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boxes</title>
+    <title>Krabice</title>
 
-    <!-- Bootstrap 6 (alpha) – CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
-
     <style>
-        /* pomocné orámování krabic, ať vidíme, co se děje */
-        .krabice {
-            border: 2px dashed tomato;
-            padding: 1rem;
-            min-height: 80px;
+  
+        .img {
+            width: 100%;
+            border-radius: 8px;
         }
+
+        .hero-text {
+            text-align: center;
+        }
+
+
+
+        .footer-layout {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+        }
+
     </style>
 </head>
 <body>
 
-    <!-- Ukazatel aktuálního breakpointu (vpravo dole) -->
-    <div class="position-fixed bottom-0 end-0 m-3 badge theme-inverse fs-md">
-        <span class="sm:d-none">XS &lt; 576</span>
-        <span class="d-none sm:d-inline md:d-none">SM ≥ 576</span>
-        <span class="d-none md:d-inline lg:d-none">MD ≥ 768</span>
-        <span class="d-none lg:d-inline xl:d-none">LG ≥ 1024</span>
-        <span class="d-none xl:d-inline 2xl:d-none">XL ≥ 1280</span>
-        <span class="d-none 2xl:d-inline">2XL ≥ 1536</span>
-    </div>
 
-    <div class="container">
-        <h1 class="my-5">Boxes</h1>
+    <nav class="navbar md:navbar-expand bg-1 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Krabice</a>
+            
+            <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#menu" aria-label="Menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <dialog class="drawer drawer-end" id="menu">
+                <div class="drawer-header">
+                    <h5 class="drawer-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Zavřít"></button>
+                </div>
+                <div class="drawer-body">¨¨
+                    <ul class="nav navbar-nav md:ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#hero">Domů</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sluzby">Služby</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#galerie">Galerie</a></li>
+                    </ul>
+                </div>
+            </dialog>
+        </div>
+    </nav>
 
+
+
+    <div class="hero container my-5 py-4">
+        <div class="row align-items-center justify-content-center text-center">
+
+            <div class="col-12 lg:col-6 mb-4 lg:mb-0">
+                <h1 class="display-5 fw-bold text-primary">Stěhování bez stresu</h1>
+                <p class="lead text-muted">Prodáváme ty nejpevnější a nejhezčí krabice a zajistíme krabice.</p>
+                <button class="btn btn-primary btn-lg mt-2">Koupit krabice</button>
+            </div>
+            
+            <div class="col-12 lg:col-6">
+                <img src="img/hero.svg" alt="Stěhování a krabice" class="img-fluid" style="max-height: 400px;">
+            </div>
+            
+        </div>
         
     </div>
-    <div class="krabice">bez kontejneru</div>
-    <div class="container"><div class="krabice">container</div></div>
-    <div class="container-fluid"><div class="krabice">container-fluid</div></div>
 
-<div class = "row row-cols-1 md:-cols-2 lg:row-cols-3 xl: cols-4">
-        <div class = "col krabice">1</div>
-        <div class = "col krabice">2</div>
-        <div class = "col krabice">3</div>
-        <div class = "col krabice">4</div>
-        <div class = "col krabice">5</div>
-        <div class = "col krabice">6</div>
-        <div class = "col krabice">7</div>
-        <div class = "col krabice">8</div>
-</div>
 
-<main> Ahoj</main>
-<aside> Cau</aside>
 
-    <!-- Bootstrap 6 – JS (je to ES modul => type="module") -->
+
+<div class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Co nabízíme</h2>
+            <div class="row row-cols-1 md:row-cols-3 g-4">
+                
+                <div class="col">
+                    <div class="bg-white shadow-sm text-center">
+                        <h4>Prodej krabic</h4>
+                        <p>Prodáme všechny krabice, ze všech materiálů.</p>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="bg-white shadow-sm text-center">
+                        <h4>Házení krabic</h4>
+                        <p>Dejte adresu, jméno a hodíme po něm krabici.</p>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="bg-white shadow-sm text-center">
+                        <h4>Mystery krabice</h4>
+                        <p>Hodíme po vás krabici a může tam být nový Iphone nebo láva.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container my-5 py-4">
+        <h2 class="text-center mb-4">Naše krabice v akci</h2>
+    
+        <div class="row row-cols-2 md:row-cols-3 lg:row-cols-4 g-3">
+            <div class="col"><img src="img/box1.svg" class="img shadow-sm" alt="Krabice 1"></div>
+            <div class="col"><img src="img/box2.svg" class="img shadow-sm" alt="Krabice 2"></div>
+            <div class="col"><img src="img/box3.svg" class="img shadow-sm" alt="Krabice 3"></div>
+            <div class="col"><img src="img/box4.svg" class="img shadow-sm" alt="Krabice 4"></div>
+            <div class="col"><img src="img/box5.svg" class="img shadow-sm" alt="Krabice 5"></div>
+            <div class="col"><img src="img/box6.svg" class="img shadow-sm" alt="Krabice 6"></div>
+            <div class="col"><img src="img/box7.svg" class="img shadow-sm" alt="Krabice 7"></div>
+            <div class="col"><img src="img/box8.svg" class="img shadow-sm" alt="Krabice 8"></div>
+        </div>
+    </div>
+
+
+<footer class="bg-dark text-white py-4 mt-5">
+        <div class="container d-flex flex-column md:flex-row align-items-center md:justify-content-between text-center md:text-start gap-3">
+            
+            <div>
+                <h5 class="mb-0">Krabičky s.r.o.</h5>
+                <small class="text-white-50">Dáváme krabičky pro lidičky</small>
+            </div>
+            
+            <div>
+                <a href="#" class="text-white text-decoration-none me-3">Pošta</a>
+                <a href="#" class="text-white text-decoration-none">Facebook</a>
+            </div>
+            
+            <div>
+                <small>Víc info nemáme, pardon.</small>
+            </div>
+            
+        </div>
+    </footer>
+
+
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+
 </body>
 </html>
